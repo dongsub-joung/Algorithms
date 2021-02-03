@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int i, j;
+	int sum = 0;
+	int a[][3] = { {12,35,45},
+			{45,34,22},
+			{61,78,15},
+			{52,28,19} };
+
+	for (i = 0; i < 1; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			sum += a[i][j];
+		}
+	}
+	printf("%d행의 %d열의 합%d \n", i, j, sum);
+
+
+
+	return 0;
+}

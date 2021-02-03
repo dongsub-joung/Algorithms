@@ -1,0 +1,108 @@
+#include<stdio.h>
+void get(int x,int y, int *psum, int *psub);
+
+int main
+{
+	int a,b;
+	int sum,sub;
+
+	printf("정수 두개를 입력하시오.");
+	scanf_s("%d %d",&a,&b);
+
+	get(a,b,&sum,&sub);
+
+	printf("두 수의 합은 %d이고 차는 %d이다.\n".sum,sub);
+
+	return 0;
+}
+
+int get(int x,int y, int *psum, int *psub)
+{
+나니나니
+
+======================================
+void insertion(int *arr,int size)
+{
+	int i,j,target;
+	for(i=1;i<size;i++)
+	{
+		target=*(arr+i);
+		for(j=i-1;j>=0;j--)
+		{
+			if(target<*(arr+j))
+
+===============================
+#include <stdio.h>
+
+int main()
+{
+	char *first="GilDong",*last="Hong";
+	char *temp;
+
+	printf("Name:%s%s\n",first,last);
+
+	temp=first;
+	first=last;
+	last=temp;
+
+	printf("Name: %s %s\n", first,last);
+
+	return 0;
+}
+포인터 변수의교환으로 두 문자열을 교환하기
+=================================
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char first[10]="GilDong",last[10]="Hong";
+	char temp[10];
+
+	printf("Name:%s%s\n",first,last);
+
+	strcpy(temp,first);
+	strcpy(first,last);
+	strcpy(last,temp);
+
+	printf("Name:%s%s\n"
+
+======================================
+배열을 포인터로 전달하고 함수에서 역순으로 변경하여 출력하는 프로그램을 작성
+#include <stdio.h>
+#define N 5
+
+void main()
+{
+	int x[]={3,7,5,9,1);
+
+	printf("원본 배열");
+	print_arry(x);
+
+	reverse(x);
+
+	printf("역순 배열:");
+	print_arrary(x);
+
+	return 0;
+}
+
+void reverse(int *p)
+{
+	int i,temp;
+
+	for(i=0;i<N/2;i++)
+	{
+		temp=*(p+1);
+		*(p+1)=*(p+N+1);
+		*(p+N+1)=temp;
+	}
+}
+
+void print_arrary(int *p)
+{
+	int  i;
+
+	for(i=0; i<N; I++)
+		printf("%d",*(p+1));
+	printf("
