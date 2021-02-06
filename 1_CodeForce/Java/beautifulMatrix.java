@@ -1,50 +1,35 @@
 package code;
-// https://moatazmshawky.wordpress.com/2016/06/05/263a-beautiful-matrix-java/
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class beautifulMatrix{
-    public static void main(String[] args) throws IOException {
-        try
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int MAX_SIZE= 6;
+        int[][] arr= new int[MAX_SIZE][MAX_SIZE];
+        int i=0, j=0;
+        int r= 0, c= 0;
+
+        for(i= 1; i<MAX_SIZE; i++)
         {
-            Scanner sc= new Scanner(System.in);
-    //      init value
-            int MAX_SIZE= 5;
-            char [][] matrix= new char[MAX_SIZE][MAX_SIZE];
-
-    //      5* 1 line
-            for (int i=0; i<MAX_SIZE; i++)
+            for (j= 1; j<MAX_SIZE; j++)
             {
-                matrix[i]= sc.next().replaceAll(" ", "").toCharArray();
+                arr[i][j]= sc.nextInt();
+//                System.out.println(arr[i][j]);
             }
+        }
 
-    //      find '1' index [][]
-            int R= -1, C= -1;
-            for (int i=0; i<MAX_SIZE; i++)
-            {
-                for (int j=0; j<MAX_SIZE; j++)
-                {
-                    if (matrix[i][j] == '1')
-                    {
-                        R= i;
-                        C= j;
-                        break;
-                    }
-                }
-            }
-
-            int moves= Math.abs(R-2)+Math.abs(C-2);
-            System.out.println(moves);
-
-            sc.close();
-        } catch (Exception e)
+        for (i=1; i<MAX_SIZE; i++)
         {
-            e.printStackTrace();
+            for (j=1; j<MAX_SIZE; j++)
+            {
+                 if(arr[i][j] == 1)
+                 {
+                     r= i;
+                     c= j;
+                     System.out.println(Math.abs(r-3) + Math.abs(c-3));
+                 }
+            }
         }
     }
 }
-
-//pseudo code
-//  find '1' index [][] <- [2][2]
-//  절대 값
