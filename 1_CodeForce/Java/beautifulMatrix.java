@@ -12,11 +12,7 @@ public class beautifulMatrix{
 
         for(i= 1; i<MAX_SIZE; i++)
         {
-            for (j= 1; j<MAX_SIZE; j++)
-            {
-                arr[i][j]= sc.nextInt();
-//                System.out.println(arr[i][j]);
-            }
+            for (j= 1; j<MAX_SIZE; j++) arr[i][j]= sc.nextInt();
         }
 
         for (i=1; i<MAX_SIZE; i++)
